@@ -9,6 +9,7 @@ export const GlobalCSS = createGlobalStyle`
 
   html, body {
     height: 100%;
+    font-size: 16px;
     background: ${(props) => props.theme.colors.dark};
   }
 
