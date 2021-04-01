@@ -3,11 +3,11 @@ import styled from 'styled-components'
 
 import { Box } from 'components/Box'
 import { ButtonIcon } from 'components/ButtonIcon'
+import { Flex } from 'components/Flex'
 import { Icon } from 'components/Icon'
 import { Text } from 'components/Text'
 
-const CardContainerStyled = styled(Box)`
-  display: flex;
+const CardContainerStyled = styled(Flex)`
   position: relative;
 
   height: 360px;
@@ -56,8 +56,7 @@ const CardContentContainerStyled = styled(Box)`
   }
 `
 
-const CardContentBodyStyled = styled(Box)`
-  display: flex;
+const CardContentBodyStyled = styled(Flex)`
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-end;
