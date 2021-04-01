@@ -5,7 +5,7 @@ import { BoxProps } from 'components/Box'
 
 export type FlexProps = BoxProps & FlexboxProps
 
-export const Box = styled.div<FlexProps>`
+export const Flex = styled.div<FlexProps>`
   display: flex;
   ${flexbox};
 `
