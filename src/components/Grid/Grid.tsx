@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 import { ResponsiveValue, system } from 'styled-system'
 
-import { Box } from 'components/Box'
-import { Flex, FlexProps } from 'components/Flex'
+import { Box, BoxProps } from 'components/Box'
+import { Flex } from 'components/Flex'
 
 type ColProps = {
   span?: ResponsiveValue<number>
@@ -12,14 +12,10 @@ export const Grid = styled(Box)``
 
 export const Row = styled(Flex)``
 
-const ColStyled = styled(Flex)<ColProps & FlexProps>`
+export const Col = styled(Flex)<ColProps & BoxProps>`
   ${system({
     span: {
       property: 'flex'
     }
   })}
 `
-
-export const Col: React.FC<ColProps> = ({ span, children }) => {
-  return <ColStyled span={span}>{children}</ColStyled>
-}
