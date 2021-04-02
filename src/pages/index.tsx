@@ -1,5 +1,7 @@
+import { SearchLayout } from 'layouts'
+
 const Home = () => {
-  return <h1>movie-searcher</h1>
+  return <SearchLayout />
 }
 
 export default Home
