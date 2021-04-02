@@ -9,6 +9,8 @@ interface InputTextProps extends InputHTMLAttributes<HTMLInputElement> {
 }
 
 const InputTextContainer = styled(Box)`
+  width: 100%;
+
   svg {
     position: absolute;
     z-index: 1;
