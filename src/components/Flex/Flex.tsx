@@ -1,11 +1,11 @@
 import styled from 'styled-components'
 import { flexbox, FlexboxProps } from 'styled-system'
 
-import { BoxProps } from 'components/Box'
+import { Box, BoxProps } from 'components/Box'
 
 export type FlexProps = BoxProps & FlexboxProps
 
-export const Flex = styled.div<FlexProps>`
+export const Flex = styled(Box)<FlexProps>`
   display: flex;
   ${flexbox};
 `
