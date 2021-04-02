@@ -89,7 +89,11 @@ type CardProps = {
 export const Card = ({ title, description, backgroundImage }: CardProps) => {
   return (
     <CardContainerStyled>
-      <ImageStyled src={backgroundImage} width="240px" height="360px" />
+      {backgroundImage ? (
+        <ImageStyled src={backgroundImage} width="240px" height="360px" />
+      ) : (
+        <Icon name="image-not-found" viewBox="0 0 512 512" width="240px" height="360px" />
+      )}
 
       <CardContentContainerStyled>
         <ButtonIcon leftIcon={<Icon name="heart-default" width="16px" height="16px" />} />
