@@ -11,7 +11,7 @@ const BadgeBodyStyled = styled(Box)`
   padding: 8px;
   display: inline-block;
   border-radius: 5px;
-  background-color: ${(props) => props.theme.colors.midgrey};
+  background-color: ${(props) => props.theme.colors.lightgrey};
 `
 
 const BadgeTextStyled = styled(Text)`
