@@ -1,6 +1,7 @@
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 
 import useDebounce from 'helpers/hooks/useDebounce'
+import { useLocalStorage } from 'helpers/hooks/useLocalStorage'
 
 import { Icon } from 'components/Icon'
 import { InputText } from 'components/InputText/InputText'
@@ -14,7 +15,7 @@ type InputTextSearchProps = {
 }
 
 export const InputTextSearch = ({ id, name, placeholder, isLoading, resultSearch }: InputTextSearchProps) => {
-  const [text, setText] = useState<string>('star wars')
+  const [text, setText] = useLocalStorage<string>('SEARCH-TEXT', 'star wars')
 
   const search = useDebounce<string>(text, 600)
 
