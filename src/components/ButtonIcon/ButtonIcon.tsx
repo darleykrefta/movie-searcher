@@ -3,7 +3,7 @@ import { ButtonHTMLAttributes, ReactElement } from 'react'
 import styled from 'styled-components'
 
 interface ButtonIconProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  leftIcon?: ReactElement
+  icon?: ReactElement
 }
 
 const ButtonIconStyled = styled.button<ButtonIconProps>`
@@ -34,6 +34,10 @@ const ButtonIconStyled = styled.button<ButtonIconProps>`
     svg path {
       stroke: ${(props) => props.theme.colors.white};
     }
+
+    svg polyline {
+      stroke: ${(props) => props.theme.colors.white};
+    }
   }
 
   &:focus {
@@ -41,10 +45,10 @@ const ButtonIconStyled = styled.button<ButtonIconProps>`
   }
 `
 
-export const ButtonIcon = ({ leftIcon, ...props }: ButtonIconProps) => {
+export const ButtonIcon = ({ icon, ...props }: ButtonIconProps) => {
   return (
-    <ButtonIconStyled leftIcon={leftIcon} {...props}>
-      {leftIcon}
+    <ButtonIconStyled icon={icon} {...props}>
+      {icon}
     </ButtonIconStyled>
   )
 }

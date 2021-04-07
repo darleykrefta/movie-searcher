@@ -10,6 +10,8 @@ import { Text } from 'components/Text'
 const CardContainerStyled = styled(Flex)`
   position: relative;
 
+  cursor: pointer;
+
   height: 360px;
   width: 240px;
 `
@@ -84,11 +86,12 @@ type CardProps = {
   title: string
   description: string
   backgroundImage: string
+  handleClick: () => void
 }
 
-export const Card = ({ title, description, backgroundImage }: CardProps) => {
+export const Card = ({ title, description, backgroundImage, handleClick }: CardProps) => {
   return (
-    <CardContainerStyled>
+    <CardContainerStyled onClick={handleClick}>
       {backgroundImage ? (
         <ImageStyled src={backgroundImage} width="240px" height="360px" />
       ) : (
@@ -96,7 +99,7 @@ export const Card = ({ title, description, backgroundImage }: CardProps) => {
       )}
 
       <CardContentContainerStyled>
-        <ButtonIcon leftIcon={<Icon name="heart-default" width="16px" height="16px" />} />
+        <ButtonIcon icon={<Icon name="heart-default" width="16px" height="16px" />} />
 
         <CardContentBodyStyled>
           <TitleStyled>{title}</TitleStyled>
