@@ -210,7 +210,7 @@ export default {
       </g>
     )
   },
-  'not-found': {
+  'movie-searcher': {
     path: (
       <>
         <path

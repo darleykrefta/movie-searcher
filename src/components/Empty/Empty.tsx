@@ -25,7 +25,7 @@ const EmptyText = styled(Text)`
 export const Empty = ({ text, icon }: EmptyProps) => {
   const emptyIcon = useMemo(() => {
     if (!icon) {
-      return <Icon name="not-found" width="250" height="250" viewBox="0 0 512 512" />
+      return <Icon name="image-not-found" width="250" height="250" viewBox="0 0 512 512" />
     }
 
     return icon
