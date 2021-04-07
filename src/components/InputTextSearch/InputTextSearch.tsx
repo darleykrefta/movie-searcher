@@ -9,11 +9,12 @@ type InputTextSearchProps = {
   id?: string
   name: string
   placeholder: string
+  isLoading?: boolean
   resultSearch: (s: string) => void
 }
 
-export const InputTextSearch = ({ id, name, placeholder, resultSearch }: InputTextSearchProps) => {
-  const [text, setText] = useState<string>('')
+export const InputTextSearch = ({ id, name, placeholder, isLoading, resultSearch }: InputTextSearchProps) => {
+  const [text, setText] = useState<string>('star wars')
 
   const search = useDebounce<string>(text, 600)
 
@@ -25,9 +26,11 @@ export const InputTextSearch = ({ id, name, placeholder, resultSearch }: InputTe
     <InputText
       id={id}
       name={name}
+      defaultValue={text}
       placeholder={placeholder}
       onChange={(event) => setText(event.target.value)}
-      leftIcon={<Icon name="heart-default" width="16px" height="16px" />}
+      disabled={isLoading}
+      leftIcon={<Icon name="magnifier-default" width="24px" height="24px" viewBox="0 0 16 16" />}
     />
   )
 }
